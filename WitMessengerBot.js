@@ -69,4 +69,7 @@ class WitMessengerBot extends Bot{
 
 }
 
-module.exports = WitMessengerBot
+module.exports = {
+	WitMessengerBot: WitMessengerBot,
+  BotSessionsDelegate: require('./user-sessions/sessions.js')
+}

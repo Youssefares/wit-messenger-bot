@@ -3,8 +3,7 @@ const request = require('request')
 const http = require('http')
 const express = require('express')
 const bodyParser = require('body-parser')
-const WitMessengerBot = require('../WitMessengerBot')
-const BotSessionsDelegate = require('../user-sessions/sessions')
+const {WitMessengerBot, BotSessionsDelegate} = require('../WitMessengerBot')
 
 
 //custom actions to be called by wit instance per the stories
@@ -20,9 +19,9 @@ const actions = {
 }
 
 //consts
-const PAGE_ACCESS_TOKEN = "PAGE_ACCESS_TOKEN"
-const WIT_ACCESS_TOKEN = "WIT_ACCESS_TOKEN"
-const VERIFY_TOKEN = "VERIFY_TOKEN"
+const PAGE_ACCESS_TOKEN = "EAAEYqQXQ9qMBACX1sl1QIRIjRqVqeOObkRqsRlLZAZBZAPicyoeeUUc7HFZAxJzGHleYuZChseSAnDINSFZB6sZBfrqITCC1mmpVr4b9SlPwfixWkGRiUVXdHdIUHZBVp9ZBZBMF7QFdZCsB6nuLXPzVtHHNj7bMI1JhGg9k5ZBc7ZB3ZCZAgZDZD"
+const WIT_ACCESS_TOKEN = "MR4I2M7LQ2BW66AJ3IZD54JW35H22QHW"
+const VERIFY_TOKEN = "BOT_VERIFY"
 
 //WitMessengerBot instance
 let bot = new WitMessengerBot({
