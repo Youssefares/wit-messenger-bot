@@ -1,0 +1,24 @@
+{
+  "name": "wit-messenger-bot",
+  "version": "1.0.0",
+  "description": "messenger/wit.ai client",
+  "main": "WitMessengerBot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "messenger",
+    "client",
+    "wit.ai",
+    "chatbot",
+    "bot",
+    "facebook"
+  ],
+  "author": "Youssefe.fares",
+  "license": "MIT",
+  "dependencies": {
+    "messenger-bot": "^2.4.0",
+    "node-wit": "^4.2.0",
+    "realm": "^1.2.0"
+  }
+}
