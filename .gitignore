@@ -1,4 +1,6 @@
+npm-debug.log
 node_modules
 *.realm
 *.realm.lock
 default.realm.management
+default.realm.note
