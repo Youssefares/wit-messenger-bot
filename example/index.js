@@ -9,13 +9,19 @@ const {WitMessengerBot, BotSessionsDelegate} = require('../WitMessengerBot')
 //custom actions to be called by wit instance per the stories
 const actions = {
   get_random_fact: ({sessionId, context}) =>{
-    return new Promise(function(resolve, reject){
+    return new Promise((resolve, reject) =>{
       request('http://numbersapi.com/random/trivia', function(error, response, body){
         context.random_fact = body
         return resolve(context)
       })
     })
-  }
+  },
+  //
+  // send: (request, response) =>{
+  //   return new Promise((resolve, reject) => {
+  //     //implement your own send
+  //   })
+  // }
 }
 
 //consts

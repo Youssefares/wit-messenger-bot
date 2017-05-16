@@ -8,11 +8,13 @@ const {formatQuickReplies} = require('./format/fb-formatter')
 class WitMessengerBot extends Bot{
 	constructor(fbOptions, witOptions, botSessionsDelegate){
 		super(fbOptions)
-
-		//add the default send function as a function that calls the method: this.send
-		witOptions.actions['send'] = (request, response) =>{
-			return this.send(request, response)
-		}
+		//if user doesn't define his own send
+		if(!("send" in witOptions['actions'])){
+			//add the default send function as a function that calls the method: this.send
+			witOptions.actions["send"] = (request, response) =>{
+				return this.send(request, response)
+			}
+	  }
 
 		//getting wit app instance with the actions defined
 		this.witInstance = new Wit({
