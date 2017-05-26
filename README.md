@@ -44,7 +44,7 @@ This module class is a subclass of ["Bot"](https://github.com/remixz/messenger-b
 <br><br>
 
 
-#### ````runActions(sessionId, text, context, cb)````
+#### ````bot.runActions(sessionId, text, context, cb)````
 A higher-level method to the Wit converse API. `runActions` resets the last turn on new messages and errors.
 
 Takes the following parameters:
@@ -55,6 +55,16 @@ Takes the following parameters:
 
 Returns a promise. You may handle promise rejections from your defined actions or chain other functionalty here by `.then`ing your runActions call.
 
+### Context Functions
+#### ```bot.findOrCreateSession(fbid)```
+#### ```bot.fbIdForSession(sessionId)```
+#### ```bot.writeSession(sessionId, sessionData)```
+#### ```bot.deleteSession(sessionId)```
+Wit.ai does its story magic by having a uniques session-id per ongoing conversation with its own context. The user in our session setup has 3 properties: facebookId, sessionId & sessionData (context). If you don't have complex stories, and your reply in each scenario depends on the latest message only, you may not need to use this at all. 
+<br><br>
+This is done on disk persistently and efficiently sans any api calls.
+
+<br><br>
 
 
 ## Example
